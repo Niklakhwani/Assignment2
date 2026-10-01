@@ -51,5 +51,13 @@ int main()
     }
     inFile.close();
 
+    // Debug-only: print every student that was loaded.
+#ifdef _DEBUG
+    for (const STUDENT_DATA& s : students)
+    {
+        std::cout << s.firstName << " " << s.lastName << "\n";
+    }
+#endif
+
     return 0;
 }
